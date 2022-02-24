@@ -15,8 +15,7 @@
     "jsx-a11y",
     "@typescript-eslint",
     "import",
-    "simple-import-sort",
-    "prettier"
+    "simple-import-sort"
   ],
 
   "rules": {
@@ -31,7 +30,7 @@
     "react/jsx-sort-props": [
       "warn",
       {
-        "callbackLast": true,
+        "callbacksLast": true,
         "shorthandFirst": true,
         "ignoreCase": true,
         "reservedFirst": true,
@@ -65,5 +64,35 @@
         "alwaysTryTypes": true
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/__test__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react"
+      ],
+      "plugins": ["jest", "jest-dom", "testing-library"],
+      "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "jest-dom/prefer-checked": "error",
+        "jest-dom/prefer-enabled-disabled": "error",
+        "jest-dom/prefer-required": "error",
+        "jest-dom/prefer-to-have-attribute": "error",
+        "testing-library/await-async-query": "error",
+        "testing-library/no-await-sync-query": "error",
+        "testing-library/no-debugging-utils": "warn",
+        "testing-library/no-dom-import": "off"
+      },
+      "env": {
+        "jest/globals": true
+      }
+    }
+  ]
 }
