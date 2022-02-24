@@ -7,7 +7,9 @@
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:ramda/recommended",
+    "plugin:react-redux/recommended"
   ],
   "plugins": [
     "react",
@@ -15,7 +17,9 @@
     "jsx-a11y",
     "@typescript-eslint",
     "import",
-    "simple-import-sort"
+    "simple-import-sort",
+    "ramda",
+    "react-redux"
   ],
 
   "rules": {
@@ -27,6 +31,7 @@
     "simple-import-sort/exports": "warn",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+
     "react/jsx-sort-props": [
       "warn",
       {
