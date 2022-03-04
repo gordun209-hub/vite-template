@@ -1,9 +1,11 @@
 import './index.css'
 
+import Counter from './features/counter/Counter'
+
 function App() {
   return (
-    <div className='text-pink-600 '>
-      <p>Salamn Alakwm</p>
+    <div>
+      <Counter />
     </div>
   )
 }
